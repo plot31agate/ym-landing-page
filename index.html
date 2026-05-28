@@ -79,15 +79,31 @@
     .display-fifa {
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: -0.045em;
-      line-height: 0.88;
-      font-size: clamp(2.5rem, 8.5vw, 6.5rem);
+      letter-spacing: -0.05em;
+      line-height: 0.86;
+      /* Mobile: ~14vw so "WORLD CUP" almost fills viewport. Desktop capped. */
+      font-size: clamp(3.5rem, 14vw, 6rem);
     }
     .display-prize {
       font-weight: 700;
-      letter-spacing: -0.055em;
+      letter-spacing: -0.06em;
       line-height: 0.85;
-      font-size: clamp(4rem, 15vw, 12rem);
+      /* Mobile: ~18vw so €10,000 reaches the edges. Desktop capped. */
+      font-size: clamp(5rem, 18vw, 11rem);
+    }
+    .hero-subline {
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      font-size: clamp(0.9rem, 3.6vw, 1.25rem);
+    }
+    .prize-tag {
+      display: inline-block;
+      background: rgb(61, 138, 121);
+      color: #fff;
+      padding: 0.15em 0.5em;
+      margin-left: 0.25em;
+      line-height: 1;
     }
   </style>
 </head>
@@ -129,8 +145,8 @@
     <div class="relative z-10 flex-1 flex flex-col items-center justify-between text-center px-6 sm:px-8 pt-4 sm:pt-6 pb-8 sm:pb-10">
 
       <!-- TOP: tagline + FIFA WORLD CUP 2026 + country pill -->
-      <div class="flex flex-col items-center">
-        <p class="text-[11px] sm:text-xs font-medium uppercase tracking-[0.25em] text-white/85">
+      <div class="flex flex-col items-center w-full">
+        <p class="text-[10px] sm:text-xs font-medium uppercase tracking-[0.28em] text-white/90">
           Your Markets <span class="opacity-50">·</span> Your Odds
         </p>
 
@@ -138,30 +154,30 @@
           FIFA<br />World Cup<br />2026
         </h1>
 
-        <span class="mt-5 sm:mt-6 inline-flex items-center gap-2.5 sm:gap-3 bg-brand-green text-white text-[10px] sm:text-xs font-semibold uppercase tracking-[0.18em] px-4 py-2 rounded-md">
+        <span class="mt-4 sm:mt-5 inline-flex items-center gap-3 sm:gap-4 bg-brand-green text-white text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] px-5 sm:px-6 py-2 rounded-md">
           <span>Canada</span>
-          <span class="w-1 h-1 rounded-full bg-white/70"></span>
+          <span class="w-1 h-1 rounded-full bg-white/80"></span>
           <span>USA</span>
-          <span class="w-1 h-1 rounded-full bg-white/70"></span>
+          <span class="w-1 h-1 rounded-full bg-white/80"></span>
           <span>Mexico</span>
         </span>
       </div>
 
       <!-- BOTTOM: €10,000 + tagline + CTA -->
-      <div class="flex flex-col items-center w-full mt-8">
+      <div class="flex flex-col items-center w-full mt-6">
         <div class="display-prize">€10,000</div>
 
-        <p class="mt-4 sm:mt-5 text-base sm:text-lg lg:text-xl font-semibold uppercase tracking-tight">
-          Predict the World Cup. Win the<span class="inline-block bg-brand-green text-white px-2 sm:px-2.5 py-0.5 ml-1.5 align-baseline">Prize Pool</span>.
+        <p class="hero-subline mt-3 sm:mt-4">
+          Predict the World Cup. Win the<span class="prize-tag">Prize Pool</span>.
         </p>
 
         <a href="https://ympredictions.com/signup"
-           class="mt-6 sm:mt-7 inline-flex items-center justify-center gap-2 bg-white text-ink text-base font-semibold px-7 py-4 rounded-full hover:bg-brand-green hover:text-white transition-colors">
+           class="mt-5 sm:mt-6 inline-flex items-center justify-center gap-2 bg-white text-ink text-base font-semibold px-7 py-4 rounded-full hover:bg-brand-green hover:text-white transition-colors">
           Enter the Predictor
           <span aria-hidden="true">→</span>
         </a>
-        <p class="mt-3 text-xs sm:text-sm font-medium text-white/75">
-          Top 25 predictors share the prize · Free to enter · 30-second sign-up
+        <p class="mt-3 text-[11px] sm:text-sm font-medium text-white/80">
+          Top 25 share the prize · Free to enter · 30-second sign-up
         </p>
       </div>
     </div>
