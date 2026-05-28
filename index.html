@@ -6,10 +6,10 @@
   <title>YM Predictions — FIFA World Cup 2026 Predictor</title>
   <meta name="description" content="Free-to-enter FIFA World Cup 2026 predictor. €10,000 prize pool shared by the top 25 predictors." />
 
-  <!-- Space Grotesk: the only font on the page -->
+  <!-- Space Grotesk: body / supporting type. Anton: chunky display for FIFA + €10,000 -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Tailwind via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -77,19 +77,21 @@
           rgba(0,0,0,0.75) 100%);
     }
     .display-fifa {
-      font-weight: 700;
+      font-family: 'Anton', 'Space Grotesk', sans-serif;
+      font-weight: 400; /* Anton ships as 400 only, but renders heavy */
       text-transform: uppercase;
-      letter-spacing: -0.05em;
-      line-height: 0.86;
-      /* Mobile: ~14vw so "WORLD CUP" almost fills viewport. Desktop capped. */
-      font-size: clamp(3.5rem, 14vw, 6rem);
+      letter-spacing: -0.005em;
+      line-height: 0.88;
+      /* Mobile: ~16vw so "WORLD CUP" almost fills viewport. Desktop capped. */
+      font-size: clamp(4rem, 16vw, 7rem);
     }
     .display-prize {
-      font-weight: 700;
-      letter-spacing: -0.06em;
-      line-height: 0.85;
-      /* Mobile: ~18vw so €10,000 reaches the edges. Desktop capped. */
-      font-size: clamp(5rem, 18vw, 11rem);
+      font-family: 'Anton', 'Space Grotesk', sans-serif;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      line-height: 0.88;
+      /* Mobile: ~20vw so €10,000 reaches the edges. Desktop capped. */
+      font-size: clamp(5.5rem, 20vw, 12rem);
     }
     .hero-subline {
       font-weight: 600;
@@ -116,7 +118,7 @@
   <section class="relative w-full min-h-[100svh] overflow-hidden text-white flex flex-col">
 
     <!-- ASSET: hero image (trophy in stadium) -->
-    <img src="YMPredictionsFinal.png"
+    <img src="YMPredictionsFinal.jpg"
          alt="FIFA World Cup trophy at sunset"
          class="absolute inset-0 w-full h-full object-cover object-center -z-10" />
     <div class="absolute inset-0 hero-overlay -z-10"></div>
