@@ -118,13 +118,10 @@
   <!-- ============================================================ -->
   <section class="relative w-full min-h-[100svh] overflow-hidden text-white flex flex-col">
 
-    <!-- ASSET: hero image - HD landscape for desktop, portrait JPG for mobile -->
-    <picture class="absolute inset-0 -z-10">
-      <source media="(min-width: 768px)" srcset="World%20Cup%20Image%20HD.jpg" />
-      <img src="YMPredictionsFinal.jpg"
-           alt="FIFA World Cup trophy at sunset"
-           class="absolute inset-0 w-full h-full object-cover object-bottom scale-105 origin-bottom md:scale-100 md:object-center" />
-    </picture>
+    <!-- ASSET: hero image (single source for mobile + desktop) -->
+    <img src="ym-bg-image.png"
+         alt="FIFA World Cup trophy at sunset"
+         class="absolute inset-0 w-full h-full object-cover object-center -z-10" />
     <div class="absolute inset-0 hero-overlay -z-10"></div>
 
     <!-- Header (transparent, sits on top of hero) -->
