@@ -139,22 +139,22 @@
           <span class="text-sm font-medium text-white/75">Free · 18+ · One entry per person</span>
         </div>
 
-        <!-- Slim in-hero step strip -->
-        <div class="mt-7 flex flex-wrap items-center gap-x-4 gap-y-3 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.18em] text-white/90">
-          <span class="flex items-center gap-2">
-            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-brand-green text-white text-[11px] font-bold">1</span>
-            Register
-          </span>
-          <span class="text-white/35" aria-hidden="true">→</span>
-          <span class="flex items-center gap-2">
-            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-brand-green text-white text-[11px] font-bold">2</span>
-            Verify email
-          </span>
-          <span class="text-white/35" aria-hidden="true">→</span>
-          <span class="flex items-center gap-2">
-            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-brand-green text-white text-[11px] font-bold">3</span>
-            In the draw
-          </span>
+        <!-- In-hero step strip - prominent pills -->
+        <div class="mt-7 flex flex-wrap items-center gap-x-2 sm:gap-x-3 gap-y-3">
+          <div class="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full pl-1.5 pr-4 py-1.5">
+            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-brand-green text-white text-sm font-bold">1</span>
+            <span class="text-xs sm:text-sm font-bold uppercase tracking-widest text-white">Register</span>
+          </div>
+          <span class="text-white/50 text-lg font-bold" aria-hidden="true">→</span>
+          <div class="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full pl-1.5 pr-4 py-1.5">
+            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-brand-green text-white text-sm font-bold">2</span>
+            <span class="text-xs sm:text-sm font-bold uppercase tracking-widest text-white">Verify email</span>
+          </div>
+          <span class="text-white/50 text-lg font-bold" aria-hidden="true">→</span>
+          <div class="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full pl-1.5 pr-4 py-1.5">
+            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-brand-green text-white text-sm font-bold">3</span>
+            <span class="text-xs sm:text-sm font-bold uppercase tracking-widest text-white">In the draw</span>
+          </div>
         </div>
 
         <p class="mt-6 text-xs sm:text-sm text-white/60 font-medium">
@@ -162,17 +162,17 @@
         </p>
       </div>
 
-      <!-- ASSET: Signed Messi boot framed prize image - enlarged -->
+      <!-- ASSET: Signed Messi boot framed prize image - cropped tight to the frame -->
       <div class="lg:col-span-6 relative">
-        <div class="relative w-full lg:scale-110 lg:origin-center">
+        <div class="relative w-full aspect-[5/4] overflow-hidden rounded-2xl shadow-2xl lg:scale-105 lg:origin-center">
           <img src="messi-boot-prize.png"
                alt="Signed Lionel Messi boot in framed display dome, 2022 World Cup collectible"
-               class="w-full h-auto rounded-2xl shadow-2xl" />
-          <!-- Certified badge overlaying corner of prize image -->
-          <div class="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 flex items-center gap-1.5 bg-brand-green text-white text-[10px] sm:text-xs font-bold uppercase tracking-widest px-3 py-2 rounded-full shadow-lg">
-            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-            100% Authentic
-          </div>
+               class="absolute inset-0 w-full h-full object-cover object-center scale-125" />
+        </div>
+        <!-- Certified badge floats outside the cropped container -->
+        <div class="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 z-10 flex items-center gap-1.5 bg-brand-green text-white text-[10px] sm:text-xs font-bold uppercase tracking-widest px-3 py-2 rounded-full shadow-lg">
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          100% Authentic
         </div>
       </div>
 
