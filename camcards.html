@@ -99,9 +99,10 @@
   <!-- ============================================================ -->
   <section class="relative w-full min-h-[100svh] overflow-hidden text-white flex flex-col">
 
-    <!-- ASSET: hero bg (dark stadium / Messi / trophy imagery). Placeholder is a solid dark gradient. -->
-    <!-- Drop a bg image into the repo and replace this div with an <img class="absolute inset-0 w-full h-full object-cover -z-10"> -->
-    <div class="absolute inset-0 -z-10" style="background: radial-gradient(ellipse at 50% 40%, #1a1a1a 0%, #050505 70%, #000 100%);"></div>
+    <!-- ASSET: hero bg - same World Cup image used on the main landing page -->
+    <img src="ym-bg-image.png"
+         alt="FIFA World Cup trophy at sunset"
+         class="absolute inset-0 w-full h-full object-cover object-center -z-10" />
     <div class="absolute inset-0 hero-overlay -z-10"></div>
 
     <!-- Header -->
@@ -151,13 +152,16 @@
         </p>
       </div>
 
-      <!-- ASSET: Signed boot hero image. Placeholder is a bordered dashed card - replace with <img> -->
+      <!-- ASSET: Signed Messi boot framed prize image -->
       <div class="lg:col-span-5 relative">
-        <div class="relative aspect-[4/5] w-full rounded-3xl overflow-hidden bg-white/5 border border-white/10 flex items-center justify-center">
-          <!-- PLACEHOLDER: replace with <img src="/assets/messi-boot.jpg" class="w-full h-full object-cover" alt="Signed Lionel Messi boot"> -->
-          <div class="text-center px-6">
-            <div class="text-[11px] uppercase tracking-widest text-white/40 font-semibold">[ signed messi boot image ]</div>
-            <div class="mt-3 text-sm text-white/50">Framed dome · Firma Stella</div>
+        <div class="relative w-full">
+          <img src="messi-boot-prize.png"
+               alt="Signed Lionel Messi boot in framed display dome, 2022 World Cup collectible"
+               class="w-full h-auto rounded-2xl shadow-2xl" />
+          <!-- Small certified badge overlaying corner of prize image -->
+          <div class="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 flex items-center gap-1.5 bg-brand-green text-white text-[10px] sm:text-xs font-bold uppercase tracking-widest px-3 py-2 rounded-full shadow-lg">
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            100% Authentic
           </div>
         </div>
       </div>
@@ -200,18 +204,81 @@
           </div>
         </div>
 
-        <!-- ASSET: Prize image (Messi boot in dome). Replace placeholder. -->
+        <!-- ASSET: Prize image (Messi boot in dome) - same image as hero -->
         <div class="lg:col-span-2">
-          <div class="relative aspect-square w-full rounded-2xl overflow-hidden bg-white border border-ink/10 flex items-center justify-center">
-            <!-- PLACEHOLDER: replace with <img src="/assets/messi-boot-dome.jpg" class="w-full h-full object-cover" alt="Framed signed Messi boot"> -->
-            <div class="text-center px-6">
-              <div class="text-[11px] uppercase tracking-widest text-ink/40 font-semibold">[ prize image ]</div>
-              <div class="mt-2 text-sm text-ink/50">Signed boot · framed dome</div>
-            </div>
+          <div class="relative w-full">
+            <img src="messi-boot-prize.png"
+                 alt="Framed signed Messi boot with Firma Stella certification"
+                 class="w-full h-auto rounded-2xl shadow-xl" />
           </div>
         </div>
 
       </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- AUTHENTICITY -->
+  <!-- ============================================================ -->
+  <section class="w-full">
+    <div class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-10 py-16 sm:py-20 lg:py-24">
+      <span class="eyebrow">The proof</span>
+      <h2 class="display-xl mt-3">Certified 100% authentic.</h2>
+      <p class="mt-4 max-w-2xl text-base sm:text-lg text-ink/70 leading-snug">
+        This isn't a replica or a memento. It's a real Lionel Messi boot, signed by the player in person and independently authenticated by one of Europe's leading sports memorabilia houses.
+      </p>
+
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+
+        <!-- Firma Stella authentication -->
+        <div class="border border-ink/15 rounded-2xl p-6 sm:p-7">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand-green text-white shrink-0">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            </span>
+            <h3 class="text-lg font-bold uppercase tracking-display text-ink">Firma Stella authenticated</h3>
+          </div>
+          <p class="mt-3 text-base text-ink/70 leading-snug">Independently authenticated and certificated by Firma Stella, one of Europe's leading sports memorabilia authentication houses. Certificate of Authenticity supplied with the prize.</p>
+        </div>
+
+        <!-- Signed in person -->
+        <div class="border border-ink/15 rounded-2xl p-6 sm:p-7">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand-green text-white shrink-0">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg>
+            </span>
+            <h3 class="text-lg font-bold uppercase tracking-display text-ink">Signed by Messi in person</h3>
+          </div>
+          <p class="mt-3 text-base text-ink/70 leading-snug">A verified in-person autograph, not a printed or auto-pen signature. Backed by full provenance documentation from a private signing session.</p>
+        </div>
+
+        <!-- 2022 World Cup -->
+        <div class="border border-ink/15 rounded-2xl p-6 sm:p-7">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand-green text-white shrink-0">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+            </span>
+            <h3 class="text-lg font-bold uppercase tracking-display text-ink">2022 World Cup collectible</h3>
+          </div>
+          <p class="mt-3 text-base text-ink/70 leading-snug">A boot from the tournament Messi finally won. A once-in-a-generation piece of football history, dated and provenanced to the 2022 FIFA World Cup.</p>
+        </div>
+
+        <!-- Museum-quality framing -->
+        <div class="border border-ink/15 rounded-2xl p-6 sm:p-7">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand-green text-white shrink-0">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg>
+            </span>
+            <h3 class="text-lg font-bold uppercase tracking-display text-ink">Framed display dome</h3>
+          </div>
+          <p class="mt-3 text-base text-ink/70 leading-snug">Presented in a museum-quality framed display dome. Ready to hang or display. Delivered insured, in original packaging, directly to the verified winner.</p>
+        </div>
+
+      </div>
+
+      <p class="mt-8 text-xs sm:text-sm text-ink/55 font-medium leading-snug text-center max-w-2xl mx-auto">
+        Certificate of Authenticity and provenance documentation delivered with the prize. Independent verification available on request. See <a href="#terms" class="text-brand-green font-semibold hover:underline">terms &amp; conditions</a> for full details.
+      </p>
     </div>
   </section>
 
