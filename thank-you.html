@@ -53,36 +53,28 @@
       text-transform: uppercase;
       letter-spacing: -0.01em;
       line-height: 0.9;
-      font-size: clamp(2.75rem, 8vw, 6rem);
+      font-size: clamp(2.5rem, 7vw, 5rem);
     }
     .display-prize {
       font-family: 'Anton', 'Space Grotesk', sans-serif;
       font-weight: 400;
       letter-spacing: -0.01em;
       line-height: 0.88;
-      font-size: clamp(4rem, 14vw, 10rem);
-    }
-    .display-xl {
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: -0.03em;
-      line-height: 0.95;
-      font-size: clamp(1.75rem, 4vw, 2.75rem);
+      font-size: clamp(3.5rem, 12vw, 8rem);
     }
     .eyebrow {
       font-size: 11px;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.18em;
-      color: rgb(61, 138, 121);
     }
     .hero-overlay {
       background:
         linear-gradient(180deg,
-          rgba(0,0,0,0.70) 0%,
-          rgba(0,0,0,0.50) 25%,
-          rgba(0,0,0,0.45) 60%,
-          rgba(0,0,0,0.75) 100%);
+          rgba(0,0,0,0.72) 0%,
+          rgba(0,0,0,0.55) 25%,
+          rgba(0,0,0,0.50) 60%,
+          rgba(0,0,0,0.80) 100%);
     }
   </style>
 </head>
@@ -90,7 +82,7 @@
 <body class="font-sans text-ink bg-white antialiased">
 
   <!-- ============================================================ -->
-  <!-- HERO: confirmation + next step -->
+  <!-- SINGLE-PAGE HERO: confirmation + Predictor invite in one view -->
   <!-- ============================================================ -->
   <section class="relative w-full min-h-[100svh] overflow-hidden text-white flex flex-col">
 
@@ -112,136 +104,74 @@
       </div>
     </header>
 
-    <!-- Hero content -->
-    <div class="relative z-10 flex-1 flex flex-col items-center justify-center text-center max-w-4xl mx-auto w-full px-6 sm:px-8 lg:px-10 py-10 lg:py-16">
+    <!-- Main content: single centred column with confirmation + Predictor invite -->
+    <div class="relative z-10 flex-1 flex flex-col items-center justify-center text-center max-w-3xl mx-auto w-full px-6 sm:px-8 lg:px-10 py-8 sm:py-10">
 
-      <!-- Big green tick -->
-      <div class="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-brand-green shadow-lg">
-        <svg class="w-8 h-8 sm:w-10 sm:h-10 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Green check -->
+      <div class="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-brand-green shadow-lg">
+        <svg class="w-7 h-7 sm:w-8 sm:h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
           <path d="M20 6 9 17l-5-5"/>
         </svg>
       </div>
 
-      <span class="eyebrow text-white/80 mt-6" style="color: rgba(255,255,255,0.75);">You're in the draw</span>
+      <span class="eyebrow mt-5 text-white/80">You're in the draw</span>
 
-      <h1 class="display-hero mt-4">
+      <h1 class="display-hero mt-3">
         Thanks for<br />
         <span class="text-brand-green">entering.</span>
       </h1>
 
-      <p class="mt-6 max-w-xl text-lg sm:text-xl font-medium text-white/90 leading-snug">
+      <p class="mt-5 max-w-xl text-base sm:text-lg font-medium text-white/90 leading-snug">
         Check your inbox and click the verification link to lock in your entry for the Signed Messi Boot draw.
       </p>
 
-      <div class="mt-8 inline-flex flex-wrap items-center justify-center gap-3 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.18em] text-white/85">
-        <span class="flex items-center gap-2">
-          <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-brand-green text-white text-[11px] font-bold">1</span>
-          Registered
-        </span>
-        <span class="text-white/40" aria-hidden="true">→</span>
-        <span class="flex items-center gap-2">
-          <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-white text-brand-green text-[11px] font-bold ring-2 ring-white/40">2</span>
-          <span class="text-white">Verify email now</span>
-        </span>
-        <span class="text-white/40" aria-hidden="true">→</span>
-        <span class="flex items-center gap-2 opacity-70">
-          <span class="inline-flex items-center justify-center w-6 h-6 rounded-full border border-white/40 text-white text-[11px] font-bold">3</span>
-          In the draw
-        </span>
+      <!-- Progress step strip -->
+      <div class="mt-6 flex flex-wrap items-center justify-center gap-x-2 sm:gap-x-3 gap-y-3">
+        <div class="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full pl-1.5 pr-4 py-1.5">
+          <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-brand-green text-white text-sm font-bold">
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          </span>
+          <span class="text-xs font-bold uppercase tracking-widest text-white">Registered</span>
+        </div>
+        <span class="text-white/50 text-lg font-bold" aria-hidden="true">→</span>
+        <div class="inline-flex items-center gap-2.5 bg-white text-ink rounded-full pl-1.5 pr-4 py-1.5">
+          <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-brand-green text-white text-sm font-bold">2</span>
+          <span class="text-xs font-bold uppercase tracking-widest">Verify email</span>
+        </div>
+        <span class="text-white/50 text-lg font-bold" aria-hidden="true">→</span>
+        <div class="inline-flex items-center gap-2.5 bg-white/5 backdrop-blur-sm border border-white/15 rounded-full pl-1.5 pr-4 py-1.5 opacity-70">
+          <span class="inline-flex items-center justify-center w-7 h-7 rounded-full border border-white/40 text-white text-sm font-bold">3</span>
+          <span class="text-xs font-bold uppercase tracking-widest text-white">In the draw</span>
+        </div>
       </div>
 
-      <p class="mt-8 text-xs sm:text-sm text-white/60 font-medium">
-        Winner drawn ahead of the World Cup Final on Sunday 19 July 2026.
-      </p>
-    </div>
-  </section>
+      <!-- Divider -->
+      <div class="mt-10 sm:mt-12 mb-6 flex items-center gap-4 w-full max-w-md">
+        <div class="flex-1 h-px bg-white/20"></div>
+        <span class="text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] text-white/60">While you wait</span>
+        <div class="flex-1 h-px bg-white/20"></div>
+      </div>
 
-  <!-- ============================================================ -->
-  <!-- WHILE YOU WAIT: PLAY THE PREDICTOR (€10,000) -->
-  <!-- ============================================================ -->
-  <section class="w-full" style="background-color: rgba(61, 138, 121, 0.06);">
-    <div class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-10 py-16 sm:py-20 lg:py-24 text-center">
-
-      <span class="eyebrow">While you wait</span>
-      <h2 class="mt-3 text-2xl sm:text-3xl lg:text-4xl font-bold uppercase tracking-display leading-tight">
+      <!-- Predictor invite -->
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold uppercase tracking-tight leading-tight">
         Now play the Predictor.
       </h2>
-
-      <div class="display-prize mt-8 sm:mt-10">
+      <div class="display-prize mt-5">
         &euro;10,000
       </div>
-
-      <p class="mt-6 sm:mt-8 max-w-2xl mx-auto text-lg sm:text-xl font-semibold uppercase tracking-tight">
-        You're already registered. Predict outcomes across the World Cup and the top 25 on the leaderboard share the pool.
+      <p class="mt-4 max-w-lg text-sm sm:text-base font-semibold uppercase tracking-tight text-white/90">
+        You're already registered. Top 25 predictors share the pool.
       </p>
 
-      <div class="mt-8 sm:mt-10 flex flex-wrap items-center justify-center gap-x-5 sm:gap-x-8 gap-y-3 text-sm sm:text-base lg:text-lg font-semibold uppercase tracking-tight">
-        <span><span class="text-brand-green">1st</span> &euro;2,000</span>
-        <span class="text-ink/30" aria-hidden="true">·</span>
-        <span><span class="text-brand-green">2nd</span> &euro;1,500</span>
-        <span class="text-ink/30" aria-hidden="true">·</span>
-        <span><span class="text-brand-green">3rd</span> &euro;1,100</span>
-        <span class="text-ink/30" aria-hidden="true">·</span>
-        <span>Positions 4–25 share the rest</span>
-      </div>
+      <a href="/world-cup-2026"
+         class="mt-7 inline-flex items-center justify-center gap-2 bg-white text-ink text-base font-semibold px-8 py-4 rounded-full hover:bg-brand-green hover:text-white transition-colors">
+        Play the World Cup Predictor
+        <span aria-hidden="true">→</span>
+      </a>
 
-      <div class="mt-10 sm:mt-12 flex flex-wrap items-center justify-center gap-4">
-        <a href="https://ympredictions.com/predictor"
-           class="inline-flex items-center justify-center gap-2 bg-black text-white text-base font-semibold px-8 py-4 rounded-full hover:bg-brand-green transition-colors">
-          Play the Predictor
-          <span aria-hidden="true">→</span>
-        </a>
-        <a href="index.html" class="text-sm font-semibold text-ink/70 hover:text-brand-green transition-colors underline underline-offset-4">
-          See the full prize pool
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================ -->
-  <!-- WHAT'S NEXT -->
-  <!-- ============================================================ -->
-  <section class="w-full">
-    <div class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-10 py-16 sm:py-20 lg:py-24">
-      <span class="eyebrow">What's next</span>
-      <h2 class="display-xl mt-3">Three quick things.</h2>
-
-      <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
-
-        <!-- Verify email -->
-        <div class="border border-ink/15 rounded-2xl p-6 sm:p-7">
-          <div class="flex items-center gap-3">
-            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand-green text-white shrink-0">
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-            </span>
-            <h3 class="text-lg font-bold uppercase tracking-display text-ink">Verify email</h3>
-          </div>
-          <p class="mt-3 text-base text-ink/70 leading-snug">Check your inbox for the confirmation email and click the link. Your entry only counts once your email is verified.</p>
-        </div>
-
-        <!-- Follow + share -->
-        <div class="border border-ink/15 rounded-2xl p-6 sm:p-7">
-          <div class="flex items-center gap-3">
-            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand-green text-white shrink-0">
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.59 13.51 6.83 3.98M15.41 6.51l-6.82 3.98"/></svg>
-            </span>
-            <h3 class="text-lg font-bold uppercase tracking-display text-ink">Follow &amp; share</h3>
-          </div>
-          <p class="mt-3 text-base text-ink/70 leading-snug">Follow YM Predictions on social and share the competition post. Winner announcements go live across our channels.</p>
-        </div>
-
-        <!-- Play the predictor -->
-        <div class="border border-ink/15 rounded-2xl p-6 sm:p-7">
-          <div class="flex items-center gap-3">
-            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand-green text-white shrink-0">
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 15.09 8.26 22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            </span>
-            <h3 class="text-lg font-bold uppercase tracking-display text-ink">Play the Predictor</h3>
-          </div>
-          <p class="mt-3 text-base text-ink/70 leading-snug">You're registered, so you can start predicting straight away. Climb the leaderboard for a share of the &euro;10,000 pool.</p>
-        </div>
-
-      </div>
+      <p class="mt-8 text-xs sm:text-sm text-white/60 font-medium">
+        Messi Boot winner drawn and announced on Monday 20 July 2026.
+      </p>
     </div>
   </section>
 
@@ -249,7 +179,7 @@
   <!-- FOOTER (matches other pages) -->
   <!-- ============================================================ -->
   <footer class="w-full">
-    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pb-10 sm:pb-12">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-10 sm:py-12">
       <div class="border border-ink/15 rounded-2xl p-6 sm:p-8 lg:p-10">
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
