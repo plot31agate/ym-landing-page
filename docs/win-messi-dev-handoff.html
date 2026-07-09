@@ -129,12 +129,12 @@
       <span class="eyebrow">Signed Messi Boot Giveaway</span>
       <h1 class="display-anton mt-4">Win a Messi Boot.<br /><span class="text-brand-green">Dev handoff.</span></h1>
       <p class="mt-6 text-base sm:text-lg text-ink/75 max-w-2xl leading-snug">
-        Everything YM engineering needs to ship the campaign — the entry page (<code class="font-mono text-sm bg-black/5 px-1.5 py-0.5 rounded">win-messi.html</code>) and thank-you page (<code class="font-mono text-sm bg-black/5 px-1.5 py-0.5 rounded">thank-you.html</code>) — plus the two content items still to confirm before launch.
+        Everything YM engineering needs to ship the campaign — the entry page (<code class="font-mono text-sm bg-black/5 px-1.5 py-0.5 rounded">win-messi.html</code>) and thank-you page (<code class="font-mono text-sm bg-black/5 px-1.5 py-0.5 rounded">thank-you.html</code>). Content is complete; T&amp;Cs need legal sign-off before publication.
       </p>
 
       <div class="mt-6 flex flex-wrap gap-2">
         <span class="pill pill-green">Campaign tag: WIN-MESSI</span>
-        <span class="pill pill-ink">Entries close: Sun 19 Jul 2026, before Final kickoff</span>
+        <span class="pill pill-ink">Entries close: 19:00 UTC Sun 19 Jul 2026 (Final kickoff)</span>
         <span class="pill pill-ink">Winner: Mon 20 Jul 2026</span>
       </div>
     </div>
@@ -275,14 +275,13 @@
         <p>T&amp;Cs Section 4 states following YM Predictions on at least one of Instagram / X / TikTok / Facebook is required to enter.</p>
 
         <h3 class="h3 mt-6">On the entry page</h3>
-        <p>Four platform buttons sit in the "Follow YM Predictions" section between hero and prize. They link to placeholder URLs:</p>
+        <p>Four platform buttons sit in the "Follow YM Predictions" section between hero and prize. Final URLs:</p>
         <ul>
-          <li><code>https://instagram.com/ympredictions</code></li>
+          <li><code>https://www.instagram.com/ympredictions/</code></li>
           <li><code>https://x.com/ympredictions</code></li>
-          <li><code>https://tiktok.com/@ympredictions</code></li>
-          <li><code>https://facebook.com/ympredictions</code></li>
+          <li><code>https://www.tiktok.com/@ympredictions</code></li>
+          <li><code>https://www.facebook.com/profile.php?id=61590782753477</code></li>
         </ul>
-        <p><strong>Action for social team:</strong> confirm the real handle on each platform. Dev updates the four <code>&lt;a href="…"&gt;</code> in the follow section of <code>win-messi.html</code>.</p>
 
         <h3 class="h3 mt-6">At winner claim</h3>
         <p>T&amp;Cs Section 6 requires the winner to confirm they were following at the time of the draw. Manual check:</p>
@@ -391,25 +390,38 @@
   <section class="w-full">
     <div class="max-w-4xl mx-auto px-6 sm:px-8 lg:px-10 py-8">
       <span class="eyebrow">10</span>
-      <h2 class="h2 mt-2">Two items still open</h2>
+      <h2 class="h2 mt-2">Content items — all resolved</h2>
       <div class="prose text-ink/85">
-        <p>The T&amp;Cs are otherwise complete. Promoter, eligibility, response window, KYC scope and governing law are all written into the document. Only these two need real values before launch:</p>
+        <p>Both items previously outstanding are now wired into <code>win-messi.html</code>. Nothing left blocking legal sign-off.</p>
         <table>
           <thead>
-            <tr><th>Item</th><th>Current placeholder</th><th>Owner</th><th>Change in</th></tr>
+            <tr><th>Item</th><th>Value</th><th>Location</th></tr>
           </thead>
           <tbody>
             <tr>
-              <td>Exact close time (UTC) on Sun 19 Jul</td>
-              <td>"immediately before Final kickoff, exact UTC on Platform at launch"</td>
-              <td>Ops</td>
-              <td>T&amp;Cs Section 3 in <code>win-messi.html</code></td>
+              <td>Entries close time</td>
+              <td>19:00 UTC on Sunday 19 July 2026 (Final kickoff — 15:00 ET / 20:00 BST / 21:00 CEST)</td>
+              <td>T&amp;Cs Section 3, plus hero + form microcopy</td>
             </tr>
             <tr>
-              <td>Social handles for the four platforms</td>
-              <td><code>ympredictions</code> on Instagram, X, TikTok, Facebook</td>
-              <td>Social</td>
-              <td>Follow-to-enter section in <code>win-messi.html</code></td>
+              <td>Instagram</td>
+              <td><code>https://www.instagram.com/ympredictions/</code></td>
+              <td>Follow-to-enter section</td>
+            </tr>
+            <tr>
+              <td>X (Twitter)</td>
+              <td><code>https://x.com/ympredictions</code></td>
+              <td>Follow-to-enter section</td>
+            </tr>
+            <tr>
+              <td>TikTok</td>
+              <td><code>https://www.tiktok.com/@ympredictions</code></td>
+              <td>Follow-to-enter section</td>
+            </tr>
+            <tr>
+              <td>Facebook</td>
+              <td><code>https://www.facebook.com/profile.php?id=61590782753477</code></td>
+              <td>Follow-to-enter section</td>
             </tr>
           </tbody>
         </table>
@@ -452,8 +464,8 @@
           <li>☐ Form <code>action=""</code> filled in with registration endpoint URL</li>
           <li>☐ Form success redirect confirmed (<code>data-success-redirect</code> matches deployed thank-you URL)</li>
           <li>☐ Email verification link tested end-to-end (creation → click → conversion event → CRM enrolment)</li>
-          <li>☐ Four social platform URLs updated with real handles</li>
-          <li>☐ Exact close time (UTC) added to T&amp;Cs Section 3</li>
+          <li>✅ Four social platform URLs wired (Instagram, X, TikTok, Facebook)</li>
+          <li>✅ Entries close time set to 19:00 UTC Sun 19 Jul 2026 in T&amp;Cs Section 3</li>
           <li>☐ T&amp;Cs reviewed and approved by YM legal (banner still reads "Draft for legal review before publication")</li>
           <li>☐ <code>source=WIN-MESSI</code> visible on registered account records in the DB</li>
           <li>☐ Promo code storage confirmed on account records</li>
