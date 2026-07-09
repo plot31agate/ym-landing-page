@@ -145,7 +145,7 @@
             <tr><th>Name</th><th>Notes</th></tr>
           </thead>
           <tbody>
-            <tr><td><code>source</code></td><td>Hidden, fixed value <code>WIN-MESSI</code>. Store on the account.</td></tr>
+            <tr><td><code>source</code></td><td>Hidden, fixed value <code>WIN-MESSI</code>. Store on the account and keep it queryable — this is what marks a user as a Messi Boot entry so we can pull the full list later.</td></tr>
             <tr><td><code>email</code></td><td>Required.</td></tr>
             <tr><td><code>password</code></td><td>Required. Minimum 8 characters.</td></tr>
             <tr><td><code>promo_code</code></td><td>Optional. Max 32 chars. Store on the account.</td></tr>
@@ -179,12 +179,12 @@
   <section class="w-full">
     <div class="max-w-3xl mx-auto px-6 sm:px-8 py-6 pb-16">
       <span class="eyebrow">05</span>
-      <h2 class="h2 mt-2">Close and draw</h2>
+      <h2 class="h2 mt-2">Close, pull, draw</h2>
       <div class="prose text-ink/85">
         <ul>
           <li>Entries close at <strong>19:00 UTC on Sunday 19 July 2026</strong>.</li>
-          <li>Draw a random winner from the valid-entries pool on Monday 20 July 2026.</li>
-          <li>Valid pool: <code>verified_email = true AND source = 'WIN-MESSI' AND created_at &lt; 2026-07-19T19:00:00Z</code>.</li>
+          <li>All entries can be pulled at any time via the <code>source = 'WIN-MESSI'</code> tag on the account record.</li>
+          <li>Draw a random winner on Monday 20 July 2026 from the valid pool: <code>verified_email = true AND source = 'WIN-MESSI' AND created_at &lt; 2026-07-19T19:00:00Z</code>.</li>
         </ul>
       </div>
     </div>
