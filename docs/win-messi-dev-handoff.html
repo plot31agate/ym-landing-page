@@ -21,10 +21,8 @@
           },
           colors: {
             'brand-green': 'rgb(61, 138, 121)',
-            'brand-mint': 'rgba(61, 138, 121, 0.06)',
             ink: '#0A0A0A',
           },
-          letterSpacing: { 'display': '-0.03em' },
         },
       },
     };
@@ -33,28 +31,20 @@
   <style>
     html, body { font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif; }
     body { color: #0A0A0A; background: #FFFFFF; -webkit-font-smoothing: antialiased; }
-
     .display-anton {
       font-family: 'Anton', 'Space Grotesk', sans-serif;
       font-weight: 400;
       text-transform: uppercase;
       letter-spacing: -0.01em;
       line-height: 0.92;
-      font-size: clamp(2.5rem, 7vw, 4.5rem);
+      font-size: clamp(2.25rem, 6vw, 3.75rem);
     }
     .h2 {
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: -0.02em;
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      line-height: 1.05;
-    }
-    .h3 {
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.02em;
-      font-size: 1rem;
-      line-height: 1.2;
+      font-size: 1.375rem;
+      line-height: 1.1;
     }
     .eyebrow {
       font-size: 11px;
@@ -63,11 +53,11 @@
       letter-spacing: 0.18em;
       color: rgb(61, 138, 121);
     }
-    .prose p { margin-top: 0.75em; line-height: 1.55; }
+    .prose p { margin-top: 0.6em; line-height: 1.55; }
     .prose ul, .prose ol { list-style-position: outside; padding-left: 1.25em; margin-top: 0.5em; }
     .prose ul { list-style-type: disc; }
     .prose ol { list-style-type: decimal; }
-    .prose li { margin-top: 0.35em; line-height: 1.5; }
+    .prose li { margin-top: 0.3em; line-height: 1.5; }
     .prose li::marker { color: rgb(61, 138, 121); }
     .prose code {
       font-family: 'JetBrains Mono', monospace;
@@ -76,12 +66,10 @@
       padding: 0.1em 0.35em;
       border-radius: 4px;
     }
-    .prose a { color: rgb(61, 138, 121); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
-    .prose a:hover { color: #0A0A0A; }
     table { width: 100%; border-collapse: collapse; margin-top: 0.75em; }
     th, td {
       text-align: left;
-      padding: 0.6em 0.75em;
+      padding: 0.55em 0.75em;
       border-bottom: 1px solid rgba(0,0,0,0.1);
       vertical-align: top;
       font-size: 14px;
@@ -96,400 +84,111 @@
       border-bottom: 1.5px solid rgba(0,0,0,0.15);
     }
     td code { white-space: nowrap; }
-    .pill {
-      display: inline-block;
-      padding: 3px 10px;
-      border-radius: 999px;
-      font-size: 10px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      line-height: 1.4;
-    }
-    .pill-green { background: rgb(61, 138, 121); color: #fff; }
-    .pill-ink { border: 1px solid rgba(0,0,0,0.2); color: rgba(0,0,0,0.7); }
   </style>
 </head>
 
 <body class="font-sans text-ink bg-white antialiased">
 
-  <!-- Header -->
-  <header class="w-full border-b border-black/5">
-    <div class="max-w-4xl mx-auto px-6 sm:px-8 py-5 flex items-center justify-between">
-      <a href="/" class="flex items-center">
-        <img src="../logo_short.svg" alt="YM Predictions" class="h-8 w-auto" />
-      </a>
-      <span class="text-xs font-semibold uppercase tracking-widest text-ink/50">Internal — Dev Handoff</span>
-    </div>
-  </header>
-
   <!-- Title -->
   <section class="w-full">
-    <div class="max-w-4xl mx-auto px-6 sm:px-8 lg:px-10 pt-12 sm:pt-16 pb-8">
-      <span class="eyebrow">Signed Messi Boot Giveaway</span>
-      <h1 class="display-anton mt-4">Win a Messi Boot.<br /><span class="text-brand-green">Dev handoff.</span></h1>
-      <p class="mt-6 text-base sm:text-lg text-ink/75 max-w-2xl leading-snug">
-        Everything YM engineering needs to ship the campaign — the entry page (<code class="font-mono text-sm bg-black/5 px-1.5 py-0.5 rounded">win-messi.html</code>) and thank-you page (<code class="font-mono text-sm bg-black/5 px-1.5 py-0.5 rounded">thank-you.html</code>). Content is complete; T&amp;Cs need legal sign-off before publication.
-      </p>
-
-      <div class="mt-6 flex flex-wrap gap-2">
-        <span class="pill pill-green">Campaign tag: WIN-MESSI</span>
-        <span class="pill pill-ink">Entries close: 19:00 UTC Sun 19 Jul 2026 (Final kickoff)</span>
-        <span class="pill pill-ink">Winner: Mon 20 Jul 2026</span>
-      </div>
+    <div class="max-w-3xl mx-auto px-6 sm:px-8 pt-12 sm:pt-16 pb-8">
+      <span class="eyebrow">Signed Messi Boot Giveaway · Dev handoff</span>
+      <h1 class="display-anton mt-4">What dev needs to do.</h1>
     </div>
   </section>
 
   <!-- 1. Files -->
   <section class="w-full">
-    <div class="max-w-4xl mx-auto px-6 sm:px-8 lg:px-10 py-8">
+    <div class="max-w-3xl mx-auto px-6 sm:px-8 py-6">
       <span class="eyebrow">01</span>
-      <h2 class="h2 mt-2">Files in this repo</h2>
+      <h2 class="h2 mt-2">Files to deploy</h2>
       <div class="prose text-ink/85">
-        <p>Two pages + four assets. All static, no build step required.</p>
-        <table>
-          <thead>
-            <tr><th>File</th><th>Purpose</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><code>win-messi.html</code></td><td>Entry page — hero, prize, authenticity, follow-required, sign-up form, T&amp;Cs</td></tr>
-            <tr><td><code>thank-you.html</code></td><td>Post-signup confirmation + Predictor cross-sell (single-hero, <code>noindex</code>)</td></tr>
-            <tr><td><code>messi-boot-prize.png</code></td><td>Framed prize image, used in hero + prize card</td></tr>
-            <tr><td><code>ym-bg-image.png</code></td><td>Hero background</td></tr>
-            <tr><td><code>ymp-logo-white.png</code></td><td>Header logo (white — for dark hero)</td></tr>
-            <tr><td><code>logo_short.svg</code></td><td>Footer logo (dark — for white footer)</td></tr>
-          </tbody>
-        </table>
-        <p><strong>Dependencies (loaded from CDN inline):</strong> Tailwind CSS, Google Fonts (Space Grotesk 400/500/600/700, Anton 400). No package install, no compile.</p>
+        <ul>
+          <li><code>win-messi.html</code> — entry page</li>
+          <li><code>thank-you.html</code> — post-signup confirmation (<code>noindex</code>)</li>
+          <li><code>messi-boot-prize.png</code></li>
+          <li><code>ym-bg-image.png</code></li>
+          <li><code>ymp-logo-white.png</code></li>
+          <li><code>logo_short.svg</code></li>
+        </ul>
+        <p>Tailwind and Google Fonts load from CDN inline. No build step.</p>
       </div>
     </div>
   </section>
 
   <!-- 2. URLs -->
   <section class="w-full">
-    <div class="max-w-4xl mx-auto px-6 sm:px-8 lg:px-10 py-8">
+    <div class="max-w-3xl mx-auto px-6 sm:px-8 py-6">
       <span class="eyebrow">02</span>
-      <h2 class="h2 mt-2">URL structure</h2>
+      <h2 class="h2 mt-2">Serve at</h2>
       <div class="prose text-ink/85">
-        <p>Deploy at these paths — T&amp;Cs and internal links reference them literally.</p>
-        <table>
-          <thead>
-            <tr><th>Path</th><th>Serves</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><code>/win-messi</code></td><td><code>win-messi.html</code></td></tr>
-            <tr><td><code>/thank-you</code></td><td><code>thank-you.html</code></td></tr>
-            <tr><td><code>/world-cup-2026</code></td><td>Destination for the "Play the Predictor" CTA on the thank-you page — must resolve to whatever URL the Predictor sits on</td></tr>
-          </tbody>
-        </table>
-        <p>If you're serving <code>.html</code> extensions instead of clean URLs, update three references:</p>
         <ul>
-          <li>T&amp;Cs Section 4 in <code>win-messi.html</code> currently reads <code>ympredictions.com/win-messi</code>.</li>
-          <li>Thank-you CTA link in <code>thank-you.html</code> — currently <code>href="/world-cup-2026"</code>.</li>
-          <li>Form redirect hint in <code>win-messi.html</code> — currently <code>data-success-redirect="thank-you.html"</code>.</li>
+          <li><code>/win-messi</code> → <code>win-messi.html</code></li>
+          <li><code>/thank-you</code> → <code>thank-you.html</code></li>
         </ul>
+        <p>The thank-you page's Predictor CTA links to <code>/world-cup-2026</code>. Point that to the actual Predictor URL if it lives elsewhere.</p>
       </div>
     </div>
   </section>
 
-  <!-- 3. Form wiring -->
+  <!-- 3. Form -->
   <section class="w-full">
-    <div class="max-w-4xl mx-auto px-6 sm:px-8 lg:px-10 py-8">
+    <div class="max-w-3xl mx-auto px-6 sm:px-8 py-6">
       <span class="eyebrow">03</span>
-      <h2 class="h2 mt-2">Sign-up form wiring</h2>
+      <h2 class="h2 mt-2">Wire the form</h2>
       <div class="prose text-ink/85">
-        <p>The form on <code>win-messi.html</code> sits inside <code>&lt;section id="enter"&gt;</code>. It's the entire on-page conversion.</p>
+        <p>The <code>&lt;form&gt;</code> on <code>win-messi.html</code> currently has <code>action=""</code>. Point it at the registration endpoint. On success, redirect to <code>/thank-you</code>.</p>
 
-        <h3 class="h3 mt-6">Attributes to fill in</h3>
-        <p>Dev sets the POST endpoint. Redirect target and hidden source are already set.</p>
-        <pre class="mt-3 p-4 bg-black text-white rounded-lg overflow-x-auto text-sm font-mono leading-relaxed"><code>&lt;form action=""                              &lt;!-- POST endpoint goes here --&gt;
-      method="post"
-      data-success-redirect="thank-you.html"
-      novalidate&gt;
-  &lt;input type="hidden" name="source" value="WIN-MESSI" /&gt;
-  ...
-&lt;/form&gt;</code></pre>
-
-        <h3 class="h3 mt-6">Fields the form submits</h3>
+        <p><strong>Fields the form submits:</strong></p>
         <table>
           <thead>
-            <tr><th>Name</th><th>Type</th><th>Required</th><th>Notes</th></tr>
+            <tr><th>Name</th><th>Notes</th></tr>
           </thead>
           <tbody>
-            <tr><td><code>source</code></td><td>hidden</td><td>Fixed <code>WIN-MESSI</code></td><td>Store on the account for attribution</td></tr>
-            <tr><td><code>email</code></td><td>email</td><td>Yes</td><td>Standard, <code>autocomplete="email"</code></td></tr>
-            <tr><td><code>password</code></td><td>password</td><td>Yes</td><td><code>minlength=8</code>. Same rules as main platform</td></tr>
-            <tr><td><code>promo_code</code></td><td>text</td><td>No</td><td>Max 32, uppercase-styled input. Store on account. Behaviour TBC by product</td></tr>
-            <tr><td><code>over18</code></td><td>checkbox</td><td>Yes</td><td>18+ confirmation</td></tr>
-            <tr><td><code>terms</code></td><td>checkbox</td><td>Yes</td><td>Consent to competition T&amp;Cs + platform terms + privacy</td></tr>
-            <tr><td><code>marketing</code></td><td>checkbox</td><td>No</td><td>Marketing opt-in for future comms</td></tr>
+            <tr><td><code>source</code></td><td>Hidden, fixed value <code>WIN-MESSI</code>. Store on the account.</td></tr>
+            <tr><td><code>email</code></td><td>Required.</td></tr>
+            <tr><td><code>password</code></td><td>Required. Minimum 8 characters.</td></tr>
+            <tr><td><code>promo_code</code></td><td>Optional. Max 32 chars. Store on the account.</td></tr>
+            <tr><td><code>over18</code></td><td>Required checkbox.</td></tr>
+            <tr><td><code>terms</code></td><td>Required checkbox.</td></tr>
+            <tr><td><code>marketing</code></td><td>Optional checkbox.</td></tr>
           </tbody>
         </table>
-
-        <h3 class="h3 mt-6">Expected server behaviour</h3>
-        <ol>
-          <li>Validate inputs (email, password strength, both required checkboxes present).</li>
-          <li>Treat as <code>POST /register</code> — this is a real platform account, not a competition-only lead.</li>
-          <li>Create the YM Predictions account, store <code>source=WIN-MESSI</code> and <code>promo_code</code> on the record.</li>
-          <li>Send verification email (Section 04).</li>
-          <li>Redirect the browser to <code>/thank-you</code> on success.</li>
-          <li>On validation error, re-render with error messages or handle client-side. HTML5 <code>required</code>/<code>minlength</code> attributes are already set.</li>
-        </ol>
-
-        <div class="mt-6 border-l-4 border-brand-green pl-4 py-2 bg-brand-green/5">
-          <p class="text-sm font-semibold text-ink"><strong>Critical:</strong> Fire the campaign conversion on <em>email-verified</em>, not on form submit. This is called out in the original brief — form-submit fires would inflate the funnel.</p>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- 4. Email verification -->
+  <!-- 4. Verify -->
   <section class="w-full">
-    <div class="max-w-4xl mx-auto px-6 sm:px-8 lg:px-10 py-8">
+    <div class="max-w-3xl mx-auto px-6 sm:px-8 py-6">
       <span class="eyebrow">04</span>
-      <h2 class="h2 mt-2">Email verification flow</h2>
+      <h2 class="h2 mt-2">Email verification</h2>
       <div class="prose text-ink/85">
-        <p>Verifying the email is what actually locks the entry in and fires the campaign conversion. Called out in T&amp;Cs Section 4.</p>
+        <p>Send a verification email on registration. Clicking the link must:</p>
         <ol>
-          <li>On successful registration, send a verification email with a unique tokenised link.</li>
-          <li>The verification landing page must:
-            <ul>
-              <li>Mark the platform email as verified.</li>
-              <li>Mark the competition entry as <strong>valid</strong> (the draw only pulls from valid entries).</li>
-              <li>Fire the campaign conversion event.</li>
-              <li>Redirect to the Predictor or show a confirmation screen.</li>
-            </ul>
-          </li>
-          <li>If verification is not completed by the closing time (Sun 19 Jul), the entry is discarded.</li>
+          <li>Mark the email as verified.</li>
+          <li>Mark the competition entry as valid (only valid entries go into the draw).</li>
+          <li>Fire the campaign conversion event.</li>
         </ol>
+        <p><strong>Fire the campaign conversion on email verified, not on form submit.</strong></p>
       </div>
     </div>
   </section>
 
-  <!-- 5. Follow to enter -->
+  <!-- 5. Draw -->
   <section class="w-full">
-    <div class="max-w-4xl mx-auto px-6 sm:px-8 lg:px-10 py-8">
+    <div class="max-w-3xl mx-auto px-6 sm:px-8 py-6 pb-16">
       <span class="eyebrow">05</span>
-      <h2 class="h2 mt-2">Follow-to-enter (required)</h2>
-      <div class="prose text-ink/85">
-        <p>T&amp;Cs Section 4 states following YM Predictions on at least one of Instagram / X / TikTok / Facebook is required to enter.</p>
-
-        <h3 class="h3 mt-6">On the entry page</h3>
-        <p>Four platform buttons sit in the "Follow YM Predictions" section between hero and prize. Final URLs:</p>
-        <ul>
-          <li><code>https://www.instagram.com/ympredictions/</code></li>
-          <li><code>https://x.com/ympredictions</code></li>
-          <li><code>https://www.tiktok.com/@ympredictions</code></li>
-          <li><code>https://www.facebook.com/profile.php?id=61590782753477</code></li>
-        </ul>
-
-        <h3 class="h3 mt-6">At winner claim</h3>
-        <p>T&amp;Cs Section 6 requires the winner to confirm they were following at the time of the draw. Manual check:</p>
-        <ol>
-          <li>Draw pulls a random valid entry (verified email + <code>source=WIN-MESSI</code>).</li>
-          <li>Notification email asks the winner for the platform + handle they follow YMP from.</li>
-          <li>Social team verifies the follow exists and pre-dates the draw (Mon 20 Jul).</li>
-          <li>Not verified → forfeit, draw an alternative winner.</li>
-        </ol>
-      </div>
-    </div>
-  </section>
-
-  <!-- 6. Thank you -->
-  <section class="w-full">
-    <div class="max-w-4xl mx-auto px-6 sm:px-8 lg:px-10 py-8">
-      <span class="eyebrow">06</span>
-      <h2 class="h2 mt-2">Thank-you page</h2>
+      <h2 class="h2 mt-2">Close and draw</h2>
       <div class="prose text-ink/85">
         <ul>
-          <li><code>&lt;meta name="robots" content="noindex"&gt;</code> is already set.</li>
-          <li>Users only land here after form success (server-side redirect from Section 03).</li>
-          <li>CTA button links to <code>/world-cup-2026</code>. Confirm that path is correct on production and update if the Predictor lives elsewhere.</li>
-          <li>No form. Purely informational + Predictor cross-sell.</li>
+          <li>Entries close at <strong>19:00 UTC on Sunday 19 July 2026</strong>.</li>
+          <li>Draw a random winner from the valid-entries pool on Monday 20 July 2026.</li>
+          <li>Valid pool: <code>verified_email = true AND source = 'WIN-MESSI' AND created_at &lt; 2026-07-19T19:00:00Z</code>.</li>
         </ul>
       </div>
     </div>
   </section>
-
-  <!-- 7. Tracking -->
-  <section class="w-full">
-    <div class="max-w-4xl mx-auto px-6 sm:px-8 lg:px-10 py-8">
-      <span class="eyebrow">07</span>
-      <h2 class="h2 mt-2">Tracking &amp; attribution</h2>
-      <div class="prose text-ink/85">
-        <h3 class="h3 mt-4">Sources</h3>
-        <ul>
-          <li><code>source=WIN-MESSI</code> is on every registration from the entry page (hidden form field).</li>
-          <li>UTMs should still be respected for channel-level attribution:
-            <ul>
-              <li><code>utm_source=camcards</code> for Cam Cards traffic</li>
-              <li><code>utm_source=meta</code> / <code>google</code> for paid</li>
-              <li><code>utm_source=organic</code> etc for organic</li>
-            </ul>
-          </li>
-          <li>Promo code field can carry partner codes for non-Cam Cards traffic. Behaviour to be defined by product.</li>
-        </ul>
-
-        <h3 class="h3 mt-6">Conversion event</h3>
-        <p>Fire on <strong>email verified</strong>, not form submit.</p>
-        <ul>
-          <li>GA4 event: <code>messi_boot_entry_verified</code></li>
-          <li>Meta Pixel: <code>CompleteRegistration</code> + custom <code>Lead</code> with <code>campaign=win-messi</code></li>
-          <li>Google Ads: conversion tag</li>
-        </ul>
-
-        <h3 class="h3 mt-6">Paid pre-clear</h3>
-        <p>Meta and Google promotion policy. Paid team task, not dev — but call it out on the launch checklist.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 8. CRM -->
-  <section class="w-full">
-    <div class="max-w-4xl mx-auto px-6 sm:px-8 lg:px-10 py-8">
-      <span class="eyebrow">08</span>
-      <h2 class="h2 mt-2">CRM sequence</h2>
-      <div class="prose text-ink/85">
-        <p>From the original brief:</p>
-        <ol>
-          <li>Email 1 — Verification (immediate, on registration)</li>
-          <li>Email 2 — Thanks + play Predictor (post-verification)</li>
-          <li>Email 3 — Nudge if no Predictor pick within N days</li>
-          <li>Recurring — Fixtures + leaderboard position</li>
-        </ol>
-        <p>CRM owner + Activewin build the sequence. Dev fires the trigger events (<code>registered</code>, <code>email_verified</code>, <code>first_predictor_pick</code>).</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 9. Winner draw -->
-  <section class="w-full">
-    <div class="max-w-4xl mx-auto px-6 sm:px-8 lg:px-10 py-8">
-      <span class="eyebrow">09</span>
-      <h2 class="h2 mt-2">Winner draw &amp; prize claim</h2>
-      <div class="prose text-ink/85">
-        <table>
-          <thead>
-            <tr><th>Date</th><th>Action</th><th>Owner</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Sun 19 Jul, before Final kickoff</td><td>Entries close automatically at published UTC time</td><td>Dev</td></tr>
-            <tr><td>Mon 20 Jul</td><td>Winner drawn at random from valid entries</td><td>Dev / Ops</td></tr>
-            <tr><td>Mon 20 Jul</td><td>Winner notified by email</td><td>CRM</td></tr>
-            <tr><td>Mon 20 Jul → +7 days</td><td>Winner responds + provides ID + confirms social handle</td><td>Ops</td></tr>
-            <tr><td>On verification</td><td>Prize dispatched</td><td>YM Ops</td></tr>
-            <tr><td>No response in 7 days</td><td>Draw alternative winner</td><td>Ops</td></tr>
-          </tbody>
-        </table>
-        <p>Valid-entries pool: <code>verified_email = true AND source = 'WIN-MESSI' AND registered_before = 2026-07-19T[close_time]Z</code>.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 10. Open items -->
-  <section class="w-full">
-    <div class="max-w-4xl mx-auto px-6 sm:px-8 lg:px-10 py-8">
-      <span class="eyebrow">10</span>
-      <h2 class="h2 mt-2">Content items — all resolved</h2>
-      <div class="prose text-ink/85">
-        <p>Both items previously outstanding are now wired into <code>win-messi.html</code>. Nothing left blocking legal sign-off.</p>
-        <table>
-          <thead>
-            <tr><th>Item</th><th>Value</th><th>Location</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Entries close time</td>
-              <td>19:00 UTC on Sunday 19 July 2026 (Final kickoff — 15:00 ET / 20:00 BST / 21:00 CEST)</td>
-              <td>T&amp;Cs Section 3, plus hero + form microcopy</td>
-            </tr>
-            <tr>
-              <td>Instagram</td>
-              <td><code>https://www.instagram.com/ympredictions/</code></td>
-              <td>Follow-to-enter section</td>
-            </tr>
-            <tr>
-              <td>X (Twitter)</td>
-              <td><code>https://x.com/ympredictions</code></td>
-              <td>Follow-to-enter section</td>
-            </tr>
-            <tr>
-              <td>TikTok</td>
-              <td><code>https://www.tiktok.com/@ympredictions</code></td>
-              <td>Follow-to-enter section</td>
-            </tr>
-            <tr>
-              <td>Facebook</td>
-              <td><code>https://www.facebook.com/profile.php?id=61590782753477</code></td>
-              <td>Follow-to-enter section</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- 11. Timeline -->
-  <section class="w-full">
-    <div class="max-w-4xl mx-auto px-6 sm:px-8 lg:px-10 py-8">
-      <span class="eyebrow">11</span>
-      <h2 class="h2 mt-2">Timeline</h2>
-      <div class="prose text-ink/85">
-        <p>From the original campaign brief. Adjust to real dates as they land.</p>
-        <table>
-          <thead>
-            <tr><th>Date</th><th>Milestone</th><th>Blocker for</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>By Wed 8 Jul</td><td>LP live, tracking + CRM armed, boot secured, T&amp;Cs signed off</td><td>Launch</td></tr>
-            <tr><td>Thu 9 Jul (target)</td><td>Launch — pinned across all channels, paid live</td><td>Quarter-finals kickoff</td></tr>
-            <tr><td>9–15 Jul</td><td>Momentum — reminders, stories, shorts</td><td>Semis</td></tr>
-            <tr><td>16–17 Jul</td><td>Final countdown — last-chance push + paid retargeting</td><td>Entries close</td></tr>
-            <tr><td>Sun 19 Jul (Final kickoff)</td><td>Entries close</td><td>Draw</td></tr>
-            <tr><td>Mon 20 Jul</td><td>Winner drawn + announced across CraigCamCards + YMP channels</td><td>Prize dispatch</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- 12. Launch checklist -->
-  <section class="w-full">
-    <div class="max-w-4xl mx-auto px-6 sm:px-8 lg:px-10 py-8 pb-16">
-      <span class="eyebrow">12</span>
-      <h2 class="h2 mt-2">Launch checklist</h2>
-      <div class="prose text-ink/85">
-        <p>Before flipping DNS / removing <code>noindex</code>:</p>
-        <ul class="list-none pl-0">
-          <li>☐ Form <code>action=""</code> filled in with registration endpoint URL</li>
-          <li>☐ Form success redirect confirmed (<code>data-success-redirect</code> matches deployed thank-you URL)</li>
-          <li>☐ Email verification link tested end-to-end (creation → click → conversion event → CRM enrolment)</li>
-          <li>✅ Four social platform URLs wired (Instagram, X, TikTok, Facebook)</li>
-          <li>✅ Entries close time set to 19:00 UTC Sun 19 Jul 2026 in T&amp;Cs Section 3</li>
-          <li>☐ T&amp;Cs reviewed and approved by YM legal (banner still reads "Draft for legal review before publication")</li>
-          <li>☐ <code>source=WIN-MESSI</code> visible on registered account records in the DB</li>
-          <li>☐ Promo code storage confirmed on account records</li>
-          <li>☐ Meta Pixel + Google Ads tags firing on the verify event, not the form submit</li>
-          <li>☐ Boot secured, packaged, insured</li>
-          <li>☐ Winner-notification email drafted and staged in CRM</li>
-          <li>☐ Paid creatives cleared under Meta + Google promo policy</li>
-          <li>☐ <code>noindex</code> on <code>thank-you.html</code> confirmed live</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="w-full border-t border-black/10">
-    <div class="max-w-4xl mx-auto px-6 sm:px-8 py-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-      <p class="text-xs text-ink/50 font-medium">
-        Internal doc. Static markup: <code class="font-mono">win-messi.html</code> and <code class="font-mono">thank-you.html</code>.
-      </p>
-      <p class="text-xs text-ink/50 font-medium whitespace-nowrap">
-        &copy; 2026 YM Predictions
-      </p>
-    </div>
-  </footer>
 
 </body>
 </html>
