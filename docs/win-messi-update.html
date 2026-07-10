@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Win a Messi Boot — Update | YM Predictions</title>
+  <meta name="robots" content="noindex" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Space Grotesk"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+          },
+          colors: {
+            'brand-green': 'rgb(61, 138, 121)',
+            ink: '#0A0A0A',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html, body { font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif; }
+    body { color: #0A0A0A; background: #FFFFFF; -webkit-font-smoothing: antialiased; }
+    .display-anton {
+      font-family: 'Anton', 'Space Grotesk', sans-serif;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      line-height: 0.92;
+      font-size: clamp(2.25rem, 6vw, 3.75rem);
+    }
+    .h2 {
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      font-size: 1.375rem;
+      line-height: 1.1;
+    }
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: rgb(61, 138, 121);
+    }
+    .prose p { margin-top: 0.6em; line-height: 1.55; }
+    .prose ul, .prose ol { list-style-position: outside; padding-left: 1.25em; margin-top: 0.5em; }
+    .prose ul { list-style-type: disc; }
+    .prose ol { list-style-type: decimal; }
+    .prose li { margin-top: 0.3em; line-height: 1.5; }
+    .prose li::marker { color: rgb(61, 138, 121); }
+    .prose code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.875em;
+      background: rgba(0,0,0,0.06);
+      padding: 0.1em 0.35em;
+      border-radius: 4px;
+    }
+    .prose a { color: rgb(61, 138, 121); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+    .prose a:hover { color: #0A0A0A; }
+  </style>
+</head>
+
+<body class="font-sans text-ink bg-white antialiased">
+
+  <!-- Title -->
+  <section class="w-full">
+    <div class="max-w-3xl mx-auto px-6 sm:px-8 pt-12 sm:pt-16 pb-8">
+      <span class="eyebrow">Signed Messi Boot Giveaway · Update</span>
+      <h1 class="display-anton mt-4">Three changes.</h1>
+    </div>
+  </section>
+
+  <!-- 1. -->
+  <section class="w-full">
+    <div class="max-w-3xl mx-auto px-6 sm:px-8 py-6">
+      <span class="eyebrow">01</span>
+      <h2 class="h2 mt-2">Remove the "draft" banner on T&amp;Cs</h2>
+      <div class="prose text-ink/85">
+        <p>The line <em>"Draft for legal review before publication"</em> that sat above the T&amp;Cs accordion on <code>/win-messi</code> has been removed.</p>
+        <p><strong>File:</strong> <a href="https://github.com/plot31agate/ym-landing-page/blob/claude/adoring-pascal-6ycJN/win-messi.html">win-messi.html</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. -->
+  <section class="w-full">
+    <div class="max-w-3xl mx-auto px-6 sm:px-8 py-6">
+      <span class="eyebrow">02</span>
+      <h2 class="h2 mt-2">New thank-you page</h2>
+      <div class="prose text-ink/85">
+        <p>Sits after form submission and includes a junk-folder prompt so users check spam before assuming the verification email didn't arrive.</p>
+        <p><strong>File:</strong> <a href="https://github.com/plot31agate/ym-landing-page/blob/claude/adoring-pascal-6ycJN/thank-you.html">thank-you.html</a></p>
+        <p><strong>Serve at:</strong> <code>/thank-you</code></p>
+        <p>Copy on the page:</p>
+        <ul>
+          <li>Headline: <em>Check your inbox.</em></li>
+          <li>Verify email + follow YMP called out as the two conditions of entry.</li>
+          <li>Junk-folder note: <em>Can't see the email? Check your junk or spam folder.</em></li>
+          <li>Follow row: four prominent brand-green platform buttons (Instagram, X, TikTok, Facebook).</li>
+          <li>Predictor cross-sell: &euro;10,000 pool + CTA to <code>/world-cup-2026</code>.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. -->
+  <section class="w-full">
+    <div class="max-w-3xl mx-auto px-6 sm:px-8 py-6 pb-16">
+      <span class="eyebrow">03</span>
+      <h2 class="h2 mt-2">Post-verification email</h2>
+      <div class="prose text-ink/85">
+        <p>Sent to the user once they click the verification link. Confirms entry and pushes them to follow on socials.</p>
+        <p><strong>Trigger:</strong> immediately when the verified flag flips true on the account (same moment as the campaign conversion event).</p>
+        <p><strong>Fallback:</strong> if the current onboarding flow can't insert this as a per-user trigger, do a <strong>bulk send mid-campaign</strong> to everyone flagged <code>source=WIN-MESSI AND verified_email=true</code>. Same copy, same purpose.</p>
+
+        <div class="mt-4 border border-ink/15 rounded-xl p-5 sm:p-6 bg-ink/[0.03]">
+          <p class="text-xs uppercase tracking-widest font-bold text-ink/60">Email copy</p>
+          <p class="mt-3"><strong>Subject:</strong> You're in the draw. One thing left to do.</p>
+          <hr class="my-4 border-ink/10" />
+          <p class="text-sm leading-relaxed">Hi,</p>
+          <p class="text-sm leading-relaxed">Your email's verified and your entry for the Signed Messi Boot is officially in.</p>
+          <p class="text-sm leading-relaxed"><strong>One last step</strong> &mdash; following YM Predictions on socials is a condition of entry. Follow us on any one of these to lock it in:</p>
+          <ul class="text-sm mt-1">
+            <li><a href="https://www.instagram.com/ympredictions/">Instagram</a></li>
+            <li><a href="https://x.com/ympredictions">X</a></li>
+            <li><a href="https://www.tiktok.com/@ympredictions">TikTok</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61590782753477">Facebook</a></li>
+          </ul>
+          <p class="text-sm leading-relaxed">Winner drawn and announced Monday 20 July 2026.</p>
+          <p class="text-sm leading-relaxed"><strong>While you wait</strong>, play the free World Cup Predictor. Top 25 on the leaderboard share &euro;10,000. You're already registered &mdash; <a href="https://ympredictions.com/world-cup-2026">Play the Predictor &rarr;</a></p>
+          <p class="text-sm leading-relaxed">&mdash; YM Predictions</p>
+          <p class="text-xs text-ink/55 mt-4"><em>18+ Only. Please Gamble Responsibly. <a href="https://www.begambleaware.org">BeGambleAware.org</a></em></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
