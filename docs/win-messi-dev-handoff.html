@@ -162,15 +162,17 @@
   <section class="w-full">
     <div class="max-w-3xl mx-auto px-6 sm:px-8 py-6">
       <span class="eyebrow">04</span>
-      <h2 class="h2 mt-2">Email verification</h2>
+      <h2 class="h2 mt-2">Email verification &amp; follow</h2>
       <div class="prose text-ink/85">
         <p>Send a verification email on registration. Clicking the link must:</p>
         <ol>
           <li>Mark the email as verified.</li>
           <li>Mark the competition entry as valid (only valid entries go into the draw).</li>
           <li>Fire the campaign conversion event.</li>
+          <li>Redirect the user back to <code>/thank-you</code> (or a "verified — now follow" variant if easy) so the follow-on-socials reminder is still front of mind.</li>
         </ol>
         <p><strong>Fire the campaign conversion on email verified, not on form submit.</strong></p>
+        <p><strong>Post-verification email (CRM):</strong> once the account is verified, trigger a short follow-up email reminding the user to follow YM Predictions on Instagram / X / TikTok / Facebook. Following is a condition of entry (see T&amp;Cs Section 4) so the reminder matters. If the current onboarding flow can't add this step easily, note it and we'll work with what exists.</p>
       </div>
     </div>
   </section>
